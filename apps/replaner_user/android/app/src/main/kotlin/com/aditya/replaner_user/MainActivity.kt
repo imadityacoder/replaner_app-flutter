@@ -1,4 +1,4 @@
-package com.example.replaner_user
+package com.aditya.replaner_user
 
 import io.flutter.embedding.android.FlutterActivity
 

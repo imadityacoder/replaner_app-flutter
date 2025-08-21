@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "826647489779",
+    "project_id": "replaner-app",
+    "storage_bucket": "replaner-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826647489779:android:27467408ddee6911991b86",
+        "android_client_info": {
+          "package_name": "com.aditya.replaner_user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTlPi3c5DK-0JmNihqatp5vp9aoAljxXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826647489779:android:fdf84d9f493c7572991b86",
+        "android_client_info": {
+          "package_name": "com.example.replaner_user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTlPi3c5DK-0JmNihqatp5vp9aoAljxXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

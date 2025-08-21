@@ -7,7 +7,7 @@ import 'package:replaner_user/features/onboarding/presentation/onboarding_screen
 import 'package:replaner_user/features/splash/presentation/splash_screen.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/home',
+  initialLocation: '/',
   routes: [
     GoRoute(path: '/', builder: (context, state) => const SplashScreen()),
     GoRoute(

@@ -17,13 +17,13 @@ class ReplanerNavBar extends StatelessWidget {
             context.go('/home');
             break;
           case 1:
-            context.go('/my-bills');
+            context.push('/my-bills');
             break;
           case 2:
-            context.go('/large-collection');
+            context.push('/large-collection');
             break;
           case 3:
-            context.go('/profile');
+            context.push('/profile');
             break;
         }
       },
@@ -35,7 +35,7 @@ class ReplanerNavBar extends StatelessWidget {
     final location = GoRouterState.of(context).uri.toString();
     if (location.startsWith('/home')) return 0;
     if (location.startsWith('/my-bills')) return 1;
-    if (location.startsWith('/large-collection')) return 2;
+    if (location.startsWith('/bulk-collection')) return 2;
     if (location.startsWith('/profile')) return 3;
     return 0;
   }
@@ -43,23 +43,23 @@ class ReplanerNavBar extends StatelessWidget {
 
 List<NavigationDestination> navbarItems = const [
   NavigationDestination(
-    icon: Icon(Icons.home_outlined),
+    icon: Icon(Icons.home_rounded),
     selectedIcon: Icon(Icons.home_rounded, color: Colors.green),
     label: 'Home',
   ),
   NavigationDestination(
-    icon: Icon(Icons.receipt_long_outlined),
-    selectedIcon: Icon(Icons.receipt_long_rounded, color: Colors.green),
+    icon: Icon(Icons.account_balance_wallet),
+    selectedIcon: Icon(Icons.account_balance_wallet, color: Colors.green),
     label: 'My Bills',
   ),
   NavigationDestination(
-    icon: Icon(Icons.factory_outlined),
+    icon: Icon(Icons.factory_rounded),
     selectedIcon: Icon(Icons.factory_rounded, color: Colors.green),
-    label: 'Industry',
+    label: 'Bulk Scrap',
   ),
   NavigationDestination(
-    icon: Icon(Icons.person_outline),
-    selectedIcon: Icon(Icons.person, color: Colors.green),
+    icon: Icon(Icons.account_circle_rounded),
+    selectedIcon: Icon(Icons.account_circle_rounded, color: Colors.green),
     label: 'Profile',
   ),
 ];

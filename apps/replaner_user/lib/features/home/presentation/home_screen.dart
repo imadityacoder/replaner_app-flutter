@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: ReplanerNavBar(),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -78,39 +78,49 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 20),
               // Good Morning Text
-              Text(
-                "Good Morning,\nAmit",
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                  height: 1.2,
-                  letterSpacing: 1.4,
-                  color: Colors.grey.shade600,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Good Morning,\nAmit",
+                  style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    height: 1.2,
+                    letterSpacing: 1.4,
+                    color: Colors.grey.shade600,
+                  ),
                 ),
               ),
 
               const SizedBox(height: 20),
 
-              IntroSection(),
+              IntroCarousel(),
 
               const SizedBox(height: 30),
 
               // 🔹 Workflow Section
-              OurProcessSection(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    OurProcessSection(),
 
-              const SizedBox(height: 30),
+                    const SizedBox(height: 30),
 
-              CategoriesSection(),
+                    CategoriesSection(),
 
-              const SizedBox(height: 30),
+                    const SizedBox(height: 30),
 
-              FooterSection(),
-              Divider(thickness: 2, color: Colors.grey.shade300),
-              Center(
-                child: Image.asset(
-                  "assets/logo/logo_full.png",
-                  width: 240,
-                  fit: BoxFit.cover,
+                    FooterSection(),
+                    Divider(thickness: 2, color: Colors.grey.shade300),
+                    Center(
+                      child: Image.asset(
+                        "assets/logo/logo_full.png",
+                        width: 240,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
