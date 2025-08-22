@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:replaner_user/common/theme/app_theme.dart';
 import 'package:replaner_user/firebase_options.dart';
 import 'package:replaner_user/routes/app_router.dart';
@@ -9,7 +10,7 @@ void main() async{
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
 );
-  runApp(const ReplanerUserApp());
+  runApp(ProviderScope(child: const ReplanerUserApp()));
 }
 
 class ReplanerUserApp extends StatelessWidget {

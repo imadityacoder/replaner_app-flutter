@@ -2,8 +2,11 @@ import 'package:go_router/go_router.dart';
 import 'package:replaner_user/features/auth/presentation/login_screen.dart';
 import 'package:replaner_user/features/auth/presentation/username_screen.dart';
 import 'package:replaner_user/features/auth/presentation/otp_screen.dart';
+import 'package:replaner_user/features/bulkScrap/presentation/bulkscrap_screen.dart';
 import 'package:replaner_user/features/home/presentation/home_screen.dart';
+import 'package:replaner_user/features/myBills/presentation/mybills_screen.dart';
 import 'package:replaner_user/features/onboarding/presentation/onboarding_screen.dart';
+import 'package:replaner_user/features/settings/presentation/settings_screen.dart';
 import 'package:replaner_user/features/splash/presentation/splash_screen.dart';
 
 final GoRouter appRouter = GoRouter(
@@ -18,5 +21,8 @@ final GoRouter appRouter = GoRouter(
     GoRoute(path: '/login/otp', builder: (context, state) => OtpScreen()),
     GoRoute(path: '/username', builder: (context, state) => UserNameScreen()),
     GoRoute(path: '/home', builder: (context, state) => const HomeScreen()),
+    GoRoute(path: '/my-bills', builder: (context, state) => const MybillsScreen()),
+    GoRoute(path: '/bulk-scrap', builder: (context, state) => const BulkScrapScreen()),
+    GoRoute(path: '/settings', builder: (context, state) => const SettingsScreen()),
   ],
 );

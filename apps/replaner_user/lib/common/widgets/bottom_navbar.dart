@@ -20,10 +20,10 @@ class ReplanerNavBar extends StatelessWidget {
             context.push('/my-bills');
             break;
           case 2:
-            context.push('/large-collection');
+            context.push('/bulk-scrap');
             break;
           case 3:
-            context.push('/profile');
+            context.push('/settings');
             break;
         }
       },
@@ -35,8 +35,8 @@ class ReplanerNavBar extends StatelessWidget {
     final location = GoRouterState.of(context).uri.toString();
     if (location.startsWith('/home')) return 0;
     if (location.startsWith('/my-bills')) return 1;
-    if (location.startsWith('/bulk-collection')) return 2;
-    if (location.startsWith('/profile')) return 3;
+    if (location.startsWith('/bulk-scrap')) return 2;
+    if (location.startsWith('/settings')) return 3;
     return 0;
   }
 }
